@@ -8,6 +8,31 @@
 #5.1 Preguntarle si quiere viajar a Federación, Cataratas o Santa Teresita
 #Mostrar por pantalla los datos de la persona y el producto seleccionado
 
+def edadPersona(valor):
+	if valor < 18:
+		condicionEdad = 'menor'
+	elif valor > 18 and valor < 65:
+		condicionEdad = 'mayor' 
+	elif valor >= 65 and valor < 120:
+		condicionEdad = 'jubilado'
+	else:
+		condicionEdad = 'cadaver'
+	
+	return condicionEdad
+
+def accionPor(queHacer):
+	if queHacer == 'menor':
+		ofrecer = 'Que tipo de juguetes quieres: electrónico? de que color? camina?'
+	elif queHacer == 'mayor':
+		ofrecer = 'Que tipo de ropa quiere: camisa o pantalon, color y el talle?'
+	elif queHacer == 'jubilado':
+		ofrecer = 'Que tipo de pasajes desea: Viajar a Federación, Cataratas o Santa Teresita?'
+	
+	return ofrecer
+
+
+
+
 cuantas = int(input('Ingrese cantidad de personas a registrar: '))
 for i in range (cuantas):
 	edad = int(input('Ingrese Edad: '))
@@ -16,13 +41,10 @@ for i in range (cuantas):
 
 	nombre = input('Ingrese Nombre: ')
 	apellido = input('Ingrese Apellido: ')
-	condicionEdad = 'cadaver'
+	condicionPersona = edadPersona(edad)
+	accionPersona = accionPor(condicionPersona)
 
-	if edad < 18:
-		condicionEdad = 'menor'
-	elif edad > 18 and edad < 65:
-		condicionEdad = 'mayor' 
-	elif edad >= 65 and edad < 120:
-		condicionEdad = 'jubilado'
-	#print("Su nombre es: " + nombre + " " + apellido + " y usted es " + condicionEdad)
-	print("Su nombre es: {} {} y usted es {} ".format(nombre, apellido, condicionEdad))
+
+
+	#print("Su nombre es: " + nombre + " " + apellido + " y usted es " + condicionPersona)
+	print("Su nombre es: {} {} y usted es {}. {} ".format(nombre, apellido, condicionPersona, accionPersona))
