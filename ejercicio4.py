@@ -18,10 +18,8 @@ def edadPersona(valor):
 		lista.append('menor')
 	elif valor > 18 and valor < 65:
 		lista.append('mayor')
-	elif valor >= 65 and valor < 120:
+	elif valor >= 65 and valor <= 120:
 		lista.append('jubilado')
-	else:
-		lista.append('cadaver')
 	
 	return accionPor(lista)
 
@@ -39,7 +37,7 @@ def accionPor(queHacer):
 cuantas = int(input('Ingrese cantidad de personas a registrar: '))
 for i in range (cuantas):
 	edad = int(input('Ingrese Edad: '))
-	while (edad < 1 or edad >=121):
+	while (edad < 1 or edad > 120):
 		edad = int(input('Ingrese Edad: '))
 
 	nombre = input('Ingrese Nombre: ')
