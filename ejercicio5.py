@@ -1,4 +1,4 @@
-# #ENUNCIADO:
+# ENUNCIADO:
 # Sin tareas!! 
 
 
@@ -19,4 +19,3 @@
 # Polimorfismo: sobrecarga -> no permitido en python, debido a que no se especifica el tipo de variable como parametro
 # Modularidad: subdividir la app más pequeñas. Cada clase debe hacer una cosa por si misma
 # Constructores: inizializar un objeto desde la creación
-# 
